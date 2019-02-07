@@ -2,7 +2,7 @@
 
 //isFound=false;
 function search(id){
-    var loc=Math.floor(Math.random()*40);
+    var loc=Math.ceil(Math.random()*40);
     console.log(loc);
     if(loc==id)
     //isFound=false;
