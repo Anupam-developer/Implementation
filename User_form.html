@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+                <title>User Form</title>
+    </head>
+
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <fieldset style="text-align: center;">
+        <button id="add-user" onclick="showAddUser()">Add New User</button>
+        <button id="view-user" onclick="showUsers()">View Users</button>
+    </fieldset>
+
+    <h2 style="text-align: center; display: none;" id="user-added">User added successfully</h2>
+    <fieldset id="user-form">
+        <legend>Add User:</legend>
+        <form onsubmit="return false;" method="POST" id="myForm">
+            <label for="uname">Name:</label> <input type="text" name="name" placeholder="enter your name"
+                id="uname"><br>
+            <label for="email">Email:</label> <input type="email" name="email" placeholder="enter your email"
+                id="email"><br>
+            <label for="pwd">Password:</label> <input type="password" name="pwd" placeholder="create password"
+                id="pwd"><br>
+               <p><i>Password Must be Alpha numeric and minimum 8 characters</i></p>
+            <label for="cpwd">Confirm Password:</label> <input type="password" name="cpwd"
+                placeholder="confirm password" id="cpwd"><br>
+            <input type="submit" id="submit" onclick="addUser();" value="Add User" disabled="disabled" />
+            <input type="reset" value="Reset">
+            <input type="hidden" id="uid" value="">
+        </form>
+
+    </fieldset>
+
+    <fieldset id="users" style="display: none;">
+        <legend>Add User:</legend>
+        <table id="users">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </table>
+    </fieldset>
+    <script src="User.js"></script>
+</body>
+
+</html>
